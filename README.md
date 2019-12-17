@@ -94,6 +94,13 @@ NOTE: mounts should list the directory with all refdata.
 
 #### alignment:
 ```
-docker run -w $PWD -v $PWD:$PWD -v /var/run/docker.sock:/var/run/docker.sock -v /usr/bin/docker:/usr/bin/docker --rm  singlecellpipeline/single_cell_pipeline:v0.5.6 single_cell alignment --input_yaml align.yaml --library_id A97318A --maxjobs 2 --nocleanup --sentinel_only  --context_config context_config.yaml --submit local --loglevel DEBUG --tmpdir temp/temp --pipelinedir temp/pipeline --out_dir results/metrics --rerun --bams_dir results/bams
+docker run -w $PWD -v $PWD:$PWD -v /var/run/docker.sock:/var/run/docker.sock \
+-v /usr/bin/docker:/usr/bin/docker --rm  \
+singlecellpipeline/single_cell_pipeline:v0.5.6 single_cell alignment \
+--input_yaml align.yaml --library_id A97318A --maxjobs 2 \
+--context_config context_config.yaml --submit local \
+--loglevel DEBUG --tmpdir temp/temp --pipelinedir temp/pipeline \
+--out_dir results/metrics --bams_dir results/bams \
+--config_override '{"refdir":"refdata/refdata"}'
 ```
 
