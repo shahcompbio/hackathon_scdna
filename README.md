@@ -33,7 +33,6 @@ tar -xvf data
 save this file: 
 ```
 SA1044-A90707B-R03-C39:
-  bam: data/bwa-aln/SA1044-A90707B-R03-C39.bam
   column: 39
   condition: B
   fastqs:
@@ -51,7 +50,6 @@ SA1044-A90707B-R03-C39:
   row: 3
   sample_type: 'null'
 SA1044-A90707B-R04-C41:
-  bam: data/bwa-aln/SA1044-A90707B-R04-C41.bam
   column: 41
   condition: B
   fastqs:
